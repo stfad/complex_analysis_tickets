@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=720, initial-scale=0.5, maximum-scale=1.0, user-scalable=yes">
+		
+  <title>Генератор случайных билетов</title>
+	
+ 	
+	<link rel="stylesheet" href="./reset.css">
+	<link rel="stylesheet" href="./style.css">
+	<script src="http://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML"></script></script>
+	<script type="text/javascript">
+    function setNewEntry(entry) {
+        $('#out').html("<span class='digit big'>"+ entry +"</span>");
+        switch(entry) {
+          case 1:
+            $('#fst').html("1. Сфера Римана. Стереографическая проекция.");
+            $('#snd').html("2. Граничные значения интеграла типа Коши (свойство интеграла &#934;(&#964;,z)). Формулы Сохоцкого-Племеля.");
+            break;
+          case 2:
+            $('#fst').html("1. Формула Коши-Адамара.");
+            $('#snd').html("2. Лемма Шварца и её обобщение. Конформные автоморфизмы круга.");
+            break;
+          case 3:
+            $('#fst').html("1. Определение аналитической функции. Условия Коши - Римана.");
+            $('#snd').html("2. Задача Неймана (необходимое условие разрешимости и сведение к задаче Дирихле).");
+            break;
+          case 4:
+            $('#fst').html("1. Аналитичность суммы степенного ряда.");
+            $('#snd').html("2. Теорема монодромии.");
+            break;       
+          case 5:
+            $('#fst').html("1. Конформные отображения. Геометрический смысл модуля и аргумента производной.");
+            $('#snd').html("2. Равностепенная непрерывность равномерно ограниченного семейства аналитических функций. Принцип компактности.");
+            break;
+          case 6:
+            $('#fst').html("1. Основные свойства дробно-линейных отображений (групповое, круговое, принцип симметрии, инвариантность ангармонического отношения).");
+            $('#snd').html("2. Принцип взаимно-однозначного соответствия");
+            break;
+          case 7:
+            $('#fst').html("1. Дробно-линейные отображения верхней полуплоскости и круга на круг");
+            $('#snd').html("2. Интегральные формулы Шварца и Пуассона.");
+            break;          
+          case 8:
+            $('#fst').html("1. Функция \(z^n\) и её обращение.");
+            $('#snd').html("2. Интегральная формула Коши для внешней области");
+            break;
+          case 9:
+            $('#fst').html("1. Функция \(e^z\) и её обращение.");
+            $('#snd').html("2. Принцип аргумента.");
+            break;
+          case 10:
+            $('#fst').html("1. Определение и основные свойства комплексного интеграла.");
+            $('#snd').html("2. Аналитические функции действительного переменного. Принцип Шварца продолжения через аналитическую дугу.");
+            break;
+          case 11:
+            $('#fst').html("1. Лемма Гурса.");
+            $('#snd').html("2. Теорема Руше. Основная теорема алгебры.");
+            break;
+          case 12:
+            $('#fst').html("1. Теорема Коши.");
+            $('#snd').html("2. Принцип непрерывности. Граничная теорема единственности.");
+            break;
+          case 13:
+            $('#fst').html("1. Обобщённая теорема Коши.");
+            $('#snd').html("2. Топологическое свойство аналитической функции.");
+            break;
+          case 14:
+            $('#fst').html("1. Интегральная формула Коши.");
+            $('#snd').html("2. Основное свойство производной однолистной аналитической функции.");
+            break;
+          case 15:
+            $('#fst').html("1. Интеграл типа Коши и его основное свойство.");
+            $('#snd').html("2. Принцип симметрии Римана - Шварца.");
+            break;
+          case 16:
+            $('#fst').html("1. Понятие неопределённого интеграла. Теорема Морера.");
+            $('#snd').html("2. Теорема Римана (существование в общем случае).");
+            break;
+          case 17:
+            $('#fst').html("1. Принцип максимума модуля для аналитических функций.");
+            $('#snd').html("2. Лемма о раздутии.");
+            break;
+          case 18:
+            $('#fst').html("1. Теоремы Вейерштрасса о рядах аналитических функций.");
+            $('#snd').html("2. Разложение на простейшие дроби функций 1/\(sin^2 z\) и сtg z");
+            break;
+          case 19:
+            $('#fst').html("1. Граничные значения интеграла типа Коши (свойства интегралов &#934;(&#964;) и F(&#964;)).");
+            $('#snd').html("2. Лемма о раздутии.");
+            break;
+          case 20:
+            $('#fst').html("1. Ряд Тейлора.");
+            $('#snd').html("2. Теорема Римана (существование в случае ограниченной области).");
+            break;
+          case 21:
+            $('#fst').html("1. Внутренняя теорема единственности для аналитических функций.");
+            $('#snd').html("2. Основные свойства гармонических функций (свойство производных, свойство композиции, теорема о среднем, принцип экстремума).");
+            break;
+          case 22:
+            $('#fst').html("1. Неравенства Коши. Теорема Лиувилля.");
+            $('#snd').html("2. Теорема о пределе последовательности однолистных аналитических функций.");
+            break;
+          case 23:
+            $('#fst').html("1. Теорема Лорана.");
+            $('#snd').html("2. Понятие гармонической функции. Восстановление аналитической функции по её действительной или мнимой части.");
+            break;
+          case 24:
+            $('#fst').html("1. Изолированные особые точки и их классификация.");
+            $('#snd').html("2. Решение задачи Дирихле для единичного круга.");
+            break;
+          case 25:
+            $('#fst').html("1. Теорема Сохоцкого-Вейерштрасса.");
+            $('#snd').html("2. Решение задачи Неймана для единичного круга. Формула Дини.");
+            break;
+          case 26:
+            $('#fst').html("1. Вычет аналитической функции относительно изолированной особой точки.");
+            $('#snd').html("2. Выражение решения задачи Дирихле через функцию Грина..");
+            break;
+          case 27:
+            $('#fst').html("1. Основная теорема о вычетах.");
+            $('#snd').html("2. Однородная задача сопряжения.");
+            break;
+          case 28:
+            $('#fst').html("1. Вычисление интегралов по границе неограниченной области. Лемма Жордана.");
+            $('#snd').html("2. Определение кусочно-аналитической функции по заданному скачку.");
+            break;
+          case 29:
+            $('#fst').html("1. Формула логарифмического вычета.");
+            $('#snd').html("2. Неоднородная задача сопряжения.");
+            break;
+          default:
+        }
+    } </script>
+    <script type="text/javascript">
+    	var ticketUsed = [];
+
+    	function generateNewTicket() {
+    		var random_number = Math.floor((Math.random() *29) + 1);
+    		if (ticketUsed.indexOf(random_number) == -1)  {
+    			ticketUsed.push(random_number);
+    		} else {
+    			if (ticketUsed.length == 29) {
+    				alert("Билеты закончились!");
+    				ticketUsed.length = 0;
+    				ticketUsed.push(random_number);
+    			} else {
+    			    var number_found = false;
+    				while (!number_found) {
+    				    random_number = Math.floor((Math.random() *29) + 1);
+    				    if (ticketUsed.indexOf(random_number) == -1) {
+    				        ticketUsed.push(random_number);
+    				        number_found = true;
+    			        }
+    			    }
+    			}
+    		}
+    		return random_number;
+    	}</script>	
+<body>
+	<div class="overlay" id="saveBody1">
+		<div>
+			<div id="js-get-clip"><span class="digit big">59934</span></div>
+			<p class="main-title"></p>
+
+			<div class="string"></div>
+			<div class="out-outer">
+				<div class="out" id="out" style=""><span class="digit big"></span></div>
+				<div class="out-hide" id="out-hide"><span class="digit big">1</span></div>
+
+				
+			</div>
+			
+			<!-- <div class="btn-bold js-generate" onclick="setNewEntry(); return false;" href="#">ТЯНУТЬ БИЛЕТ</div> -->
+			<div class="btn-bold js-generate" onclick="setNewEntry(generateNewTicket()); return false;" href="#">ТЯНУТЬ БИЛЕТ</div>
+            <p class="title" id="fst"></p>
+            <p class="title" id="snd"></p>
+
+		</div>
+		
+	</div>
+
+</body></html>
